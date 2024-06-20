@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Program Mulai-->
+    <div class="container">
+        <h1>Kalkulator Suhu</h1>
+
+        <!--Form Pengisisan Suhu Mulai-->
+        <form id="temperatureForm">
+            <label for="temperatureInput" id="temperatureLabel">Celsius (°C):</label>
+            <input type="number" id="temperatureInput" name="temperatureInput">
+            <button type="button" id="convertButton">Konversi</button>
+            <button type="reset" id="resetButton">Reset</button>
+            <button type="button" id="reverseButton">Reverse</button>
+        </form>
+        <!--Form Pengisisan Suhu Selesai-->
+
+        <!--Form Hasil Konversi Suhu Mulai-->
+        <form id="resultForm">
+            <h2>Hasil Konversi:</h2>
+            <label for="convertedTemperature">Suhu Terkonversi:</label>
+            <textarea type="text" id="convertedTemperature" name="convertedTemperature" readonly></textarea> 
+            <label for="explanation">Cara Kalkulasi:</label>
+            <textarea id="explanation" name="explanation" readonly></textarea>
+        </form>
+        <!--Form Hasil Konversi Suhu Selesai-->
+
+        <!--Penjelasan Rumus Konversi Suhu Mulai-->
+        <div id="formulaExplanation">
+            <h2>Penjelasan Rumus:</h2>
+            <div id="celsiusToFahrenheitFormula" class="formula">
+                <b>Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</b><br>
+                Suhu <i>S</i> dalam derajat Fahrenheit (°F) sama dengan suhu <i>S</i> dalam derajat Celsius (°C) kali <sup>9</sup>&frasl;<sub>5</sub> tambah 32.<br><br>
+                <i>S</i><sub>(°F)</sub> = (<i>S</i><sub>(°C)</sub> × <sup>9</sup>&frasl;<sub>5</sub>) + 32<br>
+                atau<br>
+                <i>S</i><sub>(°F)</sub> = (<i>S</i><sub>(°C)</sub> × 1.8) + 32
+            </div>
+            <div id="fahrenheitToCelsiusFormula" class="formula" style="display: none;">
+                <b>Cara Konversi Dari Fahrenheit (°F) ke Celsius (°C)</b><br>
+                Suhu <i>S</i> dalam derajat Celsius (°C) sama dengan suhu <i>S</i> dalam derajat Fahrenheit (°F) kurang 32 kali <sup>5</sup>&frasl;<sub>9</sub>.<br><br>
+                <i>S</i><sub>(°C)</sub> = (<i>S</i><sub>(°F)</sub> - 32) × <sup>5</sup>&frasl;<sub>9</sub><br>
+                atau<br>
+                <i>S</i><sub>(°C)</sub> = (<i>S</i><sub>(°F)</sub> - 32) × 0.5556
+            </div>
+        </div>
+        <!--Penjelasan Rumus Konversi Suhu Selesai-->
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
